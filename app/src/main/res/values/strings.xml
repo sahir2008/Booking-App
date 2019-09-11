@@ -2,4 +2,10 @@
     <string name="app_name">Booking App</string>
     <string name="genuva_app">Genuva App</string>
     <string name="e_mail">E-mail Address</string>
+    <string name="Enter_Name">Name</string>
+    <string name="Enter_password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_Number">Phone Number</string>
+    <string name="register">REGISTER</string>
+    <string name="Creat_An_Account">Create An Account</string>
 </resources>
