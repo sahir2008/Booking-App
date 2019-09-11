@@ -24,6 +24,12 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".signUp_page">
+
+        </activity>
+        <activity android:name=".Home_Page">
+
+        </activity>
     </application>
 
 </manifest>
