@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Booking App</string>
+    <string name="genuva_app">Genuva App</string>
+    <string name="e_mail">E-mail Address</string>
+</resources>
