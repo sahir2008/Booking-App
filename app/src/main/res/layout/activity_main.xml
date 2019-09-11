@@ -81,10 +81,10 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:layout_margin="20dp"
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:background="#3854DA"
                 android:text="Login"
                 android:textAllCaps="false"
