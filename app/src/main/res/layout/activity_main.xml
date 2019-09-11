@@ -69,13 +69,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_login_edit_txt"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorAccent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:hint="Password"
+                    android:hint="@string/Enter_password"
                     android:inputType="textPassword"
                     android:textColor="#fff"/>
 
@@ -88,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:background="#3854DA"
-                android:text="Login"
+                android:text="@string/login"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="28sp"
@@ -101,7 +102,7 @@
                 android:id="@+id/or_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="_____ or _____"
+                android:text="@string/or"
                 android:textColor="#fff"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -119,7 +120,7 @@
                 android:gravity="center"
                 android:paddingStart="16dp"
                 android:src="@drawable/ic_person_add_black_24dp"
-                android:text="Create your account"
+                android:text="@string/Creat_An_Account"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 app:layout_constraintEnd_toEndOf="parent"

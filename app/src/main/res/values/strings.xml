@@ -7,10 +7,12 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="phone_Number">Phone Number</string>
     <string name="register">REGISTER</string>
-    <string name="Creat_An_Account">Create An Account</string>
+    <string name="Creat_An_Account">Create Your Account</string>
     <string name="MyTickets">My tickets</string>
     <string name="logout">Logout</string>
     <string name="controlPanel">Control Panel</string>
     <string name="SakiaElSawy">Sakia El Sawy</string>
     <string name="OperaHouse">Opera house</string>
+    <string name="login">LOGIN</string>
+    <string name="or">_____ or _____</string>
 </resources>
