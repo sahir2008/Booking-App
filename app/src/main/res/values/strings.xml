@@ -13,6 +13,7 @@
     <string name="controlPanel">Control Panel</string>
     <string name="SakiaElSawy">Sakia El Sawy</string>
     <string name="OperaHouse">Opera house</string>
-    <string name="login">LOGIN</string>
+    <string name="login">Login</string>
     <string name="or">_____ or _____</string>
+    <string name="back_arrow">Back Arrow</string>
 </resources>
