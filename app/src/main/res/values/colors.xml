@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#05A2FF</color>
     <color name="Red">#F30505</color>
+    <color name="login_btn">#3854DA</color>
+    <color name="register_btn">#66cc33</color>
+    <color name="white">#fff</color>
+    <color name="transparent">#00000000</color>
 </resources>

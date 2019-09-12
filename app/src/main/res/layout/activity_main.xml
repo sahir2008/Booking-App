@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:text="@string/genuva_app"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textSize="40sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -42,7 +42,7 @@
                 android:id="@+id/email_login_edit_txt_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#fff"
+                android:textColorHint="@color/white"
                 app:errorEnabled="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,8 +56,8 @@
                     android:gravity="center"
                     android:hint="@string/e_mail"
                     android:inputType="textEmailAddress"
-                    android:textColorHint="#fff"
-                    android:textColor="#fff"/>
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,7 +65,7 @@
                 android:id="@+id/pass_login_edit_txt_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#fff"
+                android:textColorHint="@color/white"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +80,7 @@
                     android:gravity="center"
                     android:hint="@string/Enter_password"
                     android:inputType="textPassword"
-                    android:textColor="#fff"/>
+                    android:textColor="@color/white"/>
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -90,10 +90,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:background="#3854DA"
+                android:background="@color/login_btn"
                 android:text="@string/login"
                 android:textAllCaps="false"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textSize="28sp"
                 app:layout_constraintBottom_toBottomOf="@+id/or_txt"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/or"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,7 @@
                 android:src="@drawable/ic_person_add_black_24dp"
                 android:text="@string/Creat_An_Account"
                 android:textAllCaps="false"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toStartOf="parent"
