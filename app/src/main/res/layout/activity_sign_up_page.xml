@@ -18,7 +18,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +53,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
-                android:text="@string/Creat_An_Account"
+                android:text="@string/Create_An_Account"
                 android:textColor="#fff"
                 android:textSize="30sp"
                 android:textStyle="bold"
