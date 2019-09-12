@@ -40,7 +40,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="98dp"
-                android:background="@color/transparent"
+                android:background="#00000000"
                 android:src="@drawable/back_arrow"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/createAnAccount"
@@ -55,7 +55,7 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/Creat_An_Account"
-                android:textColor="@color/white"
+                android:textColor="#fff"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/username_signUp_layout"
@@ -70,7 +70,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="16dp"
-                android:textColorHint="@color/white"
+                android:textColorHint="#fff"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
                     android:gravity="center"
                     android:hint="@string/Enter_Name"
                     android:inputType="text"
-                    android:textColor="@color/white" />
+                    android:textColor="#fff" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,7 +94,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:textColorHint="@color/white"
+                android:textColorHint="#fff"
                 app:errorEnabled="true"
                 app:layout_constraintTop_toBottomOf="@+id/username_signUp_layout"
                 app:passwordToggleEnabled="true"
@@ -107,7 +107,7 @@
                     android:gravity="center"
                     android:hint="@string/Enter_password"
                     android:inputType="textPassword"
-                    android:textColor="@color/white" />
+                    android:textColor="#fff" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -118,7 +118,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:textColorHint="@color/white"
+                android:textColorHint="#fff"
                 app:errorEnabled="true"
                 app:layout_constraintTop_toBottomOf="@+id/password_signUp_layout"
                 app:passwordToggleEnabled="true"
@@ -131,7 +131,7 @@
                     android:gravity="center"
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword"
-                    android:textColor="@color/white" />
+                    android:textColor="#fff" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -142,7 +142,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:textColorHint="@color/white"
+                android:textColorHint="#fff"
                 app:errorEnabled="true"
                 app:layout_constraintTop_toBottomOf="@+id/re_password_signUp_layout">
 
@@ -153,7 +153,7 @@
                     android:gravity="center"
                     android:hint="@string/e_mail"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/white" />
+                    android:textColor="#fff" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -164,7 +164,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:textColorHint="@color/white"
+                android:textColorHint="#fff"
                 app:errorEnabled="true"
                 app:layout_constraintTop_toBottomOf="@+id/email_signUp_layout">
 
@@ -175,7 +175,7 @@
                     android:gravity="center"
                     android:hint="@string/phone_Number"
                     android:inputType="phone"
-                    android:textColor="@color/white" />
+                    android:textColor="#fff" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -186,10 +186,10 @@
                 android:layout_margin="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:background="@color/register_btn"
+                android:background="#66cc33"
                 android:padding="16dp"
                 android:text="@string/register"
-                android:textColor="@color/white"
+                android:textColor="#fff"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
