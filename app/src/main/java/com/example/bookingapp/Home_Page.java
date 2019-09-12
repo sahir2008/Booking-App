@@ -2,9 +2,13 @@ package com.example.bookingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Home_Page extends AppCompatActivity {
     ImageView sakyaLogo, operaLogo;
@@ -20,6 +24,19 @@ public class Home_Page extends AppCompatActivity {
         ticketsButton = findViewById(R.id.tickets_Button);
         logOutButton = findViewById(R.id.logout_Button);
         controlPanelButton = findViewById(R.id.controlPanel_Button);
-
+        logOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout();
+            }
+        });
     }
+
+    public void logout() {
+        FirebaseAuth.getInstance().signOut();
+        final Intent intent = new Intent(Home_Page.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+
 }

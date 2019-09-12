@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "565394347416",
-    "firebase_url": "https://booking-app-17e5e.firebaseio.com",
-    "project_id": "booking-app-17e5e",
-    "storage_bucket": "booking-app-17e5e.appspot.com"
+    "project_number": "855531492550",
+    "firebase_url": "https://booking-register-test-1.firebaseio.com",
+    "project_id": "booking-register-test-1",
+    "storage_bucket": "booking-register-test-1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:565394347416:android:656b0d3896e7420fd6c7ed",
+        "mobilesdk_app_id": "1:855531492550:android:6a403ac7a21b0757ea33c7",
         "android_client_info": {
           "package_name": "com.example.bookingapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "565394347416-6ic2kuvqkq6effdsrff0d0bq21qjmvd1.apps.googleusercontent.com",
+          "client_id": "855531492550-q8a5rdqjo0enfct7cpp0a3bk8f5npafn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.bookingapp",
-            "certificate_hash": "b1c621273ca4e4956ad2b8ec6c0d25931f155dc2"
+            "certificate_hash": "cae2ad7012590de2dde4ef747cb24aeb3b11e49c"
           }
         },
         {
-          "client_id": "565394347416-6ju7slorvhptde8coj90l87jd16fu6q5.apps.googleusercontent.com",
+          "client_id": "855531492550-3gr903ph9nu5o820cevvuilte7qjnkeg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBjMn3fEyyvX5aGD_QVh-33Pk0Ei5LQ2B0"
+          "current_key": "AIzaSyBLyCBafDqs6v6rFO47uZ9KAUlLiZAPiPk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "565394347416-6ju7slorvhptde8coj90l87jd16fu6q5.apps.googleusercontent.com",
+              "client_id": "855531492550-3gr903ph9nu5o820cevvuilte7qjnkeg.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -122,7 +122,7 @@
                 android:gravity="center"
                 android:paddingStart="16dp"
                 android:src="@drawable/ic_person_add_black_24dp"
-                android:text="@string/Creat_An_Account"
+                android:text="@string/Create_An_Account"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 app:layout_constraintEnd_toEndOf="parent"
