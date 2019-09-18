@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -39,13 +40,14 @@ public class MainActivity extends AppCompatActivity {
     Button sign_up_btn, login_btn;
     EditText email_edit_txt_login, pass_edit_txt_login;
 
-//    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-    FirebaseAuth auth = FirebaseAuth.getInstance();
+    private FirebaseAuth mAuth;
+    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
     StorageReference storageReference = FirebaseStorage.getInstance().getReference();
+
     CallbackManager callbackManager;
     private static final String EMAIL = "email";
     LoginButton loginButton;
-    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
         BlurImageView blur_bg = (BlurImageView) findViewById(R.id.login_bg);
         blur_bg.setBlur(25);
+
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList(EMAIL));
+
         callbackManager = CallbackManager.Factory.create();
         mAuth = FirebaseAuth.getInstance();
 
@@ -78,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mAuth = FirebaseAuth.getInstance();
+
         sign_up_btn = findViewById(R.id.sign_up);
         login_btn = findViewById(R.id.login_btn);
         email_edit_txt_login = findViewById(R.id.email_login_edit_txt);
@@ -86,8 +92,7 @@ public class MainActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Intent intent = new Intent(MainActivity.this, Home_Page.class);
-                startActivity(intent);
+                login(email_edit_txt_login.getText().toString(), pass_edit_txt_login.getText().toString());
             }
         });
 
@@ -98,10 +103,48 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
-    String TAG = "FACEBOOK";
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        this.updateUI(currentUser);
+    }
+
+    String TAG = "LOGIN";
+
+    void updateUI(FirebaseUser currentUser) {
+        if (currentUser != null) {
+
+            final Intent intent = new Intent(MainActivity.this, Home_Page.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+    void login(String email, String password) {
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            updateUI(user);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(MainActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            updateUI(null);
+                        }
+                    }
+                });
+    }
 
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
@@ -124,21 +167,14 @@ public class MainActivity extends AppCompatActivity {
                             updateUI(null);
                         }
 
-                        // ...
                     }
                 });
     }
-
-    private void updateUI(FirebaseUser user) {
-        if(user != null){
-            // intent to homepage
-        }
-    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 }
