@@ -22,7 +22,7 @@ import com.jgabrielfreitas.core.BlurImageView;
 public class signUp_page extends AppCompatActivity {
     ImageButton back_arrow_sign_up_page;
     BlurImageView blur_bg;
-    EditText user_name, user_pass, user_re_pass, user_email, user_phone_number;
+    EditText user_pass, user_re_pass, user_email;
     Button register_btn;
 
     private FirebaseAuth mAuth;
@@ -37,11 +37,10 @@ public class signUp_page extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        user_name = findViewById(R.id.username_signUp);
+
         user_pass = findViewById(R.id.password_signUp);
         user_re_pass = findViewById(R.id.re_password_signUp);
         user_email = findViewById(R.id.email_signUp);
-        user_phone_number = findViewById(R.id.phoneNumber_signUp);
         register_btn = findViewById(R.id.btnRegister_signUp);
 
         back_arrow_sign_up_page = findViewById(R.id.back_arrow_sign_up);
@@ -59,7 +58,23 @@ public class signUp_page extends AppCompatActivity {
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                register(user_email.getText().toString(), user_pass.getText().toString());
+
+
+                if (user_email.getText().toString().isEmpty()) {
+                    Toast.makeText(signUp_page.this, "E-mail is empty fill pls", Toast.LENGTH_SHORT).show();
+                }
+                else if (user_pass.getText().toString().isEmpty() || user_re_pass.getText().toString().isEmpty()) {
+                    Toast.makeText(signUp_page.this, "password is empty pls fill", Toast.LENGTH_SHORT).show();
+                }
+                else if (!user_pass.getText().toString().equals(user_re_pass.getText().toString())) {
+                    Toast.makeText(signUp_page.this, "Passwords does not match", Toast.LENGTH_SHORT).show();
+                }
+                else if (user_pass.getText().toString().length() != 8){
+                    Toast.makeText(signUp_page.this, "Password can't be less than 8 characters", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    register(user_email.getText().toString(), user_pass.getText().toString());
+                }
             }
         });
     }

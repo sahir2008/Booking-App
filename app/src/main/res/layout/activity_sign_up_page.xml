@@ -18,18 +18,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
+
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <ImageButton
                 android:contentDescription="@string/back_arrow"
@@ -37,54 +40,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="98dp"
+                android:layout_marginTop="20dp"
                 android:background="#00000000"
                 android:src="@drawable/back_arrow"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/createAnAccount"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/createAnAccount"/>
 
             <TextView
                 android:id="@+id/createAnAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginTop="180dp"
                 android:gravity="center"
                 android:text="@string/Create_An_Account"
                 android:textColor="#fff"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/username_signUp_layout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/username_signUp_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="#fff"
-                app:errorEnabled="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/createAnAccount">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/username_signUp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:hint="@string/Enter_Name"
-                    android:inputType="text"
-                    android:textColor="#fff" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintTop_toBottomOf="@+id/back_arrow_sign_up"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_signUp_layout"
@@ -95,7 +72,7 @@
                 android:layout_marginEnd="16dp"
                 android:textColorHint="#fff"
                 app:errorEnabled="true"
-                app:layout_constraintTop_toBottomOf="@+id/username_signUp_layout"
+                app:layout_constraintTop_toBottomOf="@+id/email_signUp_layout"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@color/colorAccent">
 
@@ -143,7 +120,7 @@
                 android:layout_marginEnd="16dp"
                 android:textColorHint="#fff"
                 app:errorEnabled="true"
-                app:layout_constraintTop_toBottomOf="@+id/re_password_signUp_layout">
+                app:layout_constraintTop_toBottomOf="@+id/createAnAccount">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email_signUp"
@@ -156,27 +133,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneNumber_signUp_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="#fff"
-                app:errorEnabled="true"
-                app:layout_constraintTop_toBottomOf="@+id/email_signUp_layout">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phoneNumber_signUp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:hint="@string/phone_Number"
-                    android:inputType="phone"
-                    android:textColor="#fff" />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btnRegister_signUp"
@@ -193,7 +150,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phoneNumber_signUp_layout" />
+                app:layout_constraintTop_toBottomOf="@+id/re_password_signUp_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

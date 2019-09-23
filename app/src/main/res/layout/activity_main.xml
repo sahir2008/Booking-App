@@ -13,31 +13,33 @@
         android:scaleType="centerCrop"
         android:src="@drawable/wall" />
 
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/genuva_app"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        android:layout_marginTop="130dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
-            <TextView
-                android:id="@+id/app_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/genuva_app"
-                android:textColor="#fff"
-                android:textSize="40sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_login_edit_txt_layout"
@@ -45,7 +47,6 @@
                 android:layout_height="wrap_content"
                 android:textColorHint="#fff"
                 app:errorEnabled="true"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -58,7 +59,9 @@
                     android:hint="@string/e_mail"
                     android:inputType="textEmailAddress"
                     android:textColor="#fff"
-                    android:textColorHint="#fff" />
+                    android:textColorHint="#fff"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +84,9 @@
                     android:gravity="center"
                     android:hint="@string/Enter_password"
                     android:inputType="textPassword"
-                    android:textColor="#fff" />
+                    android:textColor="#fff"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"/>
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -123,14 +128,13 @@
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login_button" />
+                app:layout_constraintTop_toBottomOf="@+id/google_btn"
+                android:layout_marginTop="10dp"/>
 
             <Button
                 android:id="@+id/sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_marginTop="4dp"
                 android:background="@drawable/btn_border"
                 android:drawableStart="@drawable/ic_person_add_black_24dp"
                 android:gravity="center"
@@ -142,7 +146,21 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/or_txt" />
+                app:layout_constraintTop_toBottomOf="@+id/or_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/google_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/login_button"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="20dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
